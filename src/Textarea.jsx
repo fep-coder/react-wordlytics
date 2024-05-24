@@ -1,13 +1,10 @@
 import { useState } from "react";
 import Warning from "./Warning";
 
-function Textarea() {
-    const [text, setText] = useState("");
+function Textarea({ text, setText }) {
     const [showWarning, setShowWarning] = useState(false);
 
     function handleChange(e) {
-        // console.log(e.target.value);
-
         let newText = e.target.value;
         if (newText.match(/<script>/i)) {
             setShowWarning(true);
