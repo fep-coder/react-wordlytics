@@ -2,6 +2,7 @@ import Stat from "./Stat";
 import Textarea from "./Textarea";
 import Header from "./Header";
 import { useState } from "react";
+import { INSTAGRAM_TIKTOK_MAX_CHARACTERS, PINTEREST } from "./constants";
 
 function App() {
     const [text, setText] = useState("");
@@ -11,8 +12,9 @@ function App() {
         .trim()
         .split(/\s+/)
         .filter((x) => x != "").length;
-    const instagramCharactersLeft = 2200 - numberOfCharacters;
-    const pinterestCharactersLeft = 500 - numberOfCharacters;
+    const instagramCharactersLeft =
+        INSTAGRAM_TIKTOK_MAX_CHARACTERS - numberOfCharacters;
+    const pinterestCharactersLeft = PINTEREST - numberOfCharacters;
 
     return (
         <>
