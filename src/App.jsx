@@ -1,36 +1,18 @@
+import Stat from "./Stat";
+import Textarea from "./Textarea";
+import Header from "./Header";
+
 function App() {
     return (
         <>
-            <header>
-                <div className="bg"></div>
-                <h1>WORDLYTICS</h1>
-            </header>
+            <Header />
             <main className="container">
-                <div className="textarea">
-                    <textarea
-                        className="textarea"
-                        placeholder="Enter your text here"
-                        spellCheck="false"
-                    ></textarea>
-                </div>
-
+                <Textarea />
                 <section className="stats">
-                    <section className="stat">
-                        <span className="stat-number">0</span>
-                        <h4>Words</h4>
-                    </section>
-                    <section className="stat">
-                        <span className="stat-number">0</span>
-                        <h4>Characters</h4>
-                    </section>
-                    <section className="stat">
-                        <span className="stat-number">2200</span>
-                        <h4>Instagram / Tiktok</h4>
-                    </section>
-                    <section className="stat">
-                        <span className="stat-number">500</span>
-                        <h4>Pinterest</h4>
-                    </section>
+                    <Stat text="Characters" number="0" />
+                    <Stat text="Words" number="0" />
+                    <Stat text="Instagrams / Tiktok" number="2200" />
+                    <Stat text="Pinterest" number="500" />
                 </section>
             </main>
         </>
